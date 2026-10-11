@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.robot.HelloController">
    <children>
-      <Rectangle fx:id="robotRect" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="41.0" layoutX="288.0" layoutY="180.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Group layoutX="288.0" layoutY="180.0">
+         <children>
+            <Rectangle fx:id="robotRect" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="41.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+            <Circle fx:id="eyeLeft" layoutX="6.0" layoutY="7.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="eyeRight" layoutX="18.0" layoutY="7.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Group>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleColor" text="Zmen Farbu" />
+      <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleSize" text="Zmen velkost" />
    </children>
 </Pane>
